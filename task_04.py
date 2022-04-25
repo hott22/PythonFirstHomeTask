@@ -10,9 +10,10 @@ k = int(input('Задай степень k: '))
 
 def Sequence(number):
     data = []
-    for i in range(1, number+1):
+    for i in range(1, number):
         data.append(str(randint(1, 100)) + f'x^{number} + ')
         number -= 1
+    data.append(str(randint(1,100)) + 'x + ')
     data.append(str(randint(1,100)) + ' = 0')
     return data
 
