@@ -10,7 +10,6 @@ def Sequence(number):
     data = []
     for i in range(1, number+1):
         data.append(randint(1, 10))
-
     return data
 
 
@@ -19,11 +18,7 @@ print(f'Последовательность чисел: {my_list}')
 
 
 def newSequence(data):
-    newData = []
-    for i in data:
-        if data.count(i) == 1:
-            newData.append(i)
-
+    newData = [i for i in data if data.count(i) == 1]
     return newData
 
 
