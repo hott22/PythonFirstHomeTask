@@ -9,20 +9,20 @@ n = int(input('Количество чисел в последовательно
 def Sequence(number):
     data = []
     for i in range(1, number+1):
-        data.append(randint(1, 20))
+        data.append(randint(1, 10))
 
     return data
 
 my_list = Sequence(n)
-print(my_list)
+print(f'Последовательность чисел: {my_list}')
 
 def newSequence(data):
     newData = []
     for i in data:
-        if i not in newData:
+        if i not in newData and data.count(i)==1:
             newData.append(i)
             
     return newData
 
 new_list = newSequence(my_list)
-print(new_list)
+print(f'Последовательность неповторяющихся чисел: {new_list}')
